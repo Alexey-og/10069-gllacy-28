@@ -25,6 +25,125 @@
   font-display: swap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
+  background-color: #849D8F;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
   font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(85, 8, 0, 0.54);
+  border-radius: 26px;
+  color: inherit;
+}
+
+.button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 1px 2px #AC1000;
+}
+
+.button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
+}
+
+
+
+/* Спецпредложения */
+
+.special_offers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special_offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16px 22px 22px 16px;
+  border-radius: 16px;
+  background-position: left center;
+  width: 560px;
+  min-height: 229px;
+}
+
+.special_offer--raspberry {
+  background-image: url("../img/bg_raspberry.jpg");
+}
+
+.special_offer--chocolate {
+  background-image: url("../img/bg_chocolate.jpg");
+}
+
+.special_offer__title {
+  margin: 0;
+  padding-bottom: 16px;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.special_offer__description {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.special_offer__button {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* .special_offer__button:hover {
+
+} */
+
+
+/* Каталог */
+
+.product__image {
+  border-radius: 50%;
 }
