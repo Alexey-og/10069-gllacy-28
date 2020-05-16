@@ -6,16 +6,12 @@
   </head>
   <body>
     <header>
-      <!-- Логотип Gllacy -->
-      <a>
-        <img src="" alt="Магазин Глэйси – это мороженое собственного производства на развес">
-      </a>
-      <!-- Верхняя навигация -->
-      <nav>
+      <a class="gllacy-logo"></a>
+      <nav class="main-nav">
         <ul>
           <li><a href="catalog.html">Каталог</a>
             <ul>
-              <li>Новинки</li>
+              <li><a href="">Новинки</a></li>
               <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="">Щербеты</a></li>
               <li><a href="">Фруктовый лед</a></li>
@@ -26,29 +22,29 @@
           <li><a href="">О компании</a></li>
         </ul>
       </nav>
-      <!-- Поиск, личный кабинет -->
-      <ul>
-        <li><img src="" alt="Поиск"></li>
-        <li>Вход
-          <div>
-            <form action="">
-              <input type="text" placeholder="email@example.com">
-              <input type="password" placeholder="......">
-              <ul>
-                <li><a href="">Забыли пароль?</a></li>
-                <li><a href="">Новая регистрация</a></li>
-              </ul>
-              <button type="submit">Войти</button>
-            </form>
-          </div>
-        </li>
-        <li>Пусто</li>
-      </ul>
-      <!-- Время работы, телефон -->
-      <ul>
-        <li>с 10 до 20, ежедневно</li>
-        <li><a href="tel:+78124502525">8 812 450-25-25</a></li>
-      </ul>
+      <div class="search">
+        <a class="search__button" href=""></a>
+        <form class="search__form" action="">
+          <input class="search__input" type="text" placeholder="Крем-брюле">
+        </form>
+      </div>
+      <div>
+        <a href="">Вход</a>
+        <form action="">
+          <input type="email" placeholder="email@example.com">
+          <input type="password" placeholder="......">
+          <button type="submit">Войти</button>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </form>
+      </div>
+      <div>
+        <a href="">Пусто</a>
+      </div>
+      <div>
+        <p>с 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </div>
     </header>
 
     <main>
@@ -56,11 +52,11 @@
       <section>
         <h2 class="visually-hidden">Слайдер: выбор сладкой парочки</h2>
         <!-- Листалка слайдов -->
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
+        <div>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
         <article>
           <h3>Крем-брюле и пломбир с малиновым джемом</h3>
           <a href="">Давайте оба!</a>
@@ -91,40 +87,30 @@
 
       <section>
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul>
-          <li>
-            <article>
-              <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-              <img src="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <div>310 ₽<span>/кг</span></div>
-              <a href="">Быстрый просмотр</a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-              <img src="" alt="Сливочно-кофейное с кусочками шоколада">
-              <div>380 ₽<span>/кг</span></div>
-              <a href="">Быстрый просмотр</a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-              <img src="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <div>355 ₽<span>/кг</span></div>
-              <a href="">Быстрый просмотр</a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
-              <img src="" alt="Сливочное крем-брюле с карамельной подливкой">
-              <div>415 ₽<span>/кг</span></div>
-              <a href="">Быстрый просмотр</a>
-            </article>
-          </li>
-        </ul>
+        <article>
+          <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <a href=""><img src="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+          <div>310 ₽<span>/кг</span></div>
+          <a href="">Быстрый просмотр</a>
+        </article>
+        <article>
+          <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <a href=""><img src="" alt="Сливочно-кофейное с кусочками шоколада"></a>
+          <div>380 ₽<span>/кг</span></div>
+          <a href="">Быстрый просмотр</a>
+        </article>
+        <article>
+          <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+          <a href=""><img src="" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+          <div>355 ₽<span>/кг</span></div>
+          <a href="">Быстрый просмотр</a>
+        </article>
+        <article>
+          <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <a href=""><img src="" alt="Сливочное крем-брюле с карамельной подливкой"></a>
+          <div>415 ₽<span>/кг</span></div>
+          <a href="">Быстрый просмотр</a>
+        </article>
       </section>
 
       <section>
@@ -147,7 +133,7 @@
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="">
-            <input type="text" placeholder="email@example.com">
+            <input type="email" placeholder="email@example.com">
             <button type="submit">Отправить</button>
           </form>
         </article>
@@ -158,42 +144,33 @@
         <img src="" alt="Магазин Глэйси на карте">
         <article>
           <h3 class="visually-hidden">Контакты главного офиса и офлайн-магазина</h2>
-          <p>Адрес главного офиса<br> и офлайн-магазина:</p>
-          <address>ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
+          <p>Адрес главного офиса и&nbsp;офлайн-магазина:</p>
+          <p>ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
           <p>Для заказов по телефону:</p>
           <a href="tel:+78124502525">8 812 450-25-25</a>
           <p>(с 10 до 20 ежедневно)</p>
-          <button type="button">Форма обратной связи</button>
+          <a href="">Форма обратной связи</a>
         </article>
       </section>
     </main>
 
     <footer>
-      <section>
-        <h2 class="visually-hidden">Магазин Глэйси в соцсетях</h2>
-        <ul>
-          <li><a href="">Глэйси в Твиттере</a></li>
-          <li><a href="">Глэйси в Инстаграме</a></li>
-          <li><a href="">Глэйси на Фейсбуке</a></li>
-          <li><a href="">Глэйси во ВКонтакте</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2 class="visually-hidden">Нижнее меню</h2>
-        <ul>
-          <li><a href="">Для поставщиков</a></li>
-          <li><a href="">О производстве</a></li>
-        </ul>
-        <ul>
-          <li><a href="">Наши документы</a></li>
-          <li><a href="">Экологические стандарты</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2 class="visually-hidden">Сделано в HTML Academy</h2>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="Логотип HTML Academy"></a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
-      </section>
+      <div class="social">
+        <a class="social__icon social__icon--twitter" href="">Глэйси в Твиттере</a>
+        <a class="social__icon social__icon--instagram" href="">Глэйси в Инстаграме</a>
+        <a class="social__icon social__icon--facebook" href="">Глэйси на Фейсбуке</a>
+        <a class="social__icon social__icon--vkontakte" href="">Глэйси во ВКонтакте</a>
+      </div>
+      <div class="bottom-menu">
+        <a class="bottom-menu__item bottom-menu__item--like" href="">Для поставщиков</a>
+        <a class="bottom-menu__item" href="">О производстве</a>
+        <a class="bottom-menu__item" href="">Наши документы</a>
+        <a class="bottom-menu__item" href="">Экологические стандарты</a>
+      </div>
+      <div class="html-academy">
+        <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+        <p class="html-academy__copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
+      </div>
     </footer>
   </body>
 </html>
