@@ -404,3 +404,100 @@ button {
 .mailing__button {
   flex-grow: 0;
 }
+
+
+
+/* Футер */
+
+/* Соцсети */
+
+.page-footer {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social {
+  display: flex;
+  width: 30%;
+}
+
+.social__icon {
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  fill-opacity: 0.8;
+  background-position: center center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social__icon:hover {
+  fill-opacity: 1;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.social__icon:active {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Нижнее меню */
+
+.bottom-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  width: 40%;
+  padding: 0 40px;
+}
+
+.bottom-menu__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 30px 5px 0;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+.bottom-menu__item--like {
+  font-weight: bold;
+}
+
+.bottom-menu__item--like::before {
+  position: absolute;
+  content: "";
+  left: -22px;
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/bullet_heart.svg");
+}
+
+/* HTML Academy */
+
+.html-academy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 200px;
+}
+
+.html-academy__logo {
+  width: 108px;
+  height: 39px;
+  background-image: url("../img/logo_html-academy.svg");
+}
+
+.html-academy__copyright {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
