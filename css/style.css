@@ -55,7 +55,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.37;
   color: #ffffff;
 }
 
@@ -69,6 +69,24 @@ a:hover,
 a:active {
   color: #FFBC9E;
   text-decoration-color: rgba(255, 188, 158, 0.3);
+}
+
+input {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 7px 14px;
+  background: #FFFFFF;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #999999;
+}
+
+button {
+  border: none;
 }
 
 .button {
@@ -93,6 +111,7 @@ a:active {
   color: inherit;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 1px 2px #AC1000;
+  cursor: pointer;
 }
 
 .button:active {
@@ -100,13 +119,16 @@ a:active {
   box-shadow: inset 0px 2px 2px #942718;
 }
 
+.banners {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 /* Спецпредложения */
 
 .special_offers {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .special_offer {
@@ -249,9 +271,10 @@ a:active {
 /* О магазине Глейси */
 
 .about-gllacy {
+  margin-bottom: 40px;
+  padding: 24px 20px;
   background-image: url("../img/bg_waffle-pattern.jpg");
   border-radius: 16px;
-  padding: 24px 20px;
 }
 
 .about-gllacy__description {
@@ -274,12 +297,9 @@ a:active {
 .advantages__item {
   position: relative;
   padding: 21px 0 12px 55px;
-  font-size: 16px;
-  line-height: 1.37;
   color: #323232;
   width: 48%;
 }
-
 
 .advantages__item::before {
   content: "";
@@ -308,4 +328,79 @@ a:active {
 
 .advantages__item--thermo::before {
   background-image: url(../img/bullet_thermo.svg);
+}
+
+
+/* Новости блога */
+/* Рассылка */
+
+.blog-news,
+.mailing {
+  margin-bottom: 40px;
+  width: 560px;
+  min-height: 220px;
+  border-radius: 16px;
+  background-position: left center;
+}
+
+.blog-news {
+  padding: 23px 20px;
+  background-image: url("../img/bg_strawberry.jpg");
+}
+
+.mailing {
+  padding: 5px 6px;
+  background-image: url("../img/bg_post.png");
+}
+
+.blog-news__title {
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.37;
+  color: #323232;
+}
+
+.blog-news__link {
+  display: inline-block;
+  width: 290px;
+  padding-bottom: -5px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #323232;
+  text-decoration-color: #353535;
+}
+
+.blog-news__link:hover {
+  color: #323232;
+  text-decoration-color: #353535;
+}
+
+.mailing__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 28px 20px 35px;
+  background-color: #F8F7F4;
+  border-radius: 16px;
+}
+
+.mailing__description {
+  flex-grow: 1;
+  margin: 0;
+  color: #5A5A5A;
+}
+
+.mailing__email {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.mailing__button {
+  flex-grow: 0;
 }
