@@ -201,15 +201,15 @@ a:active {
 }
 
 .product__button {
+  position: absolute;
+  left: center;
+  bottom: -53px;
+  z-index: 11;
   display: none;
 }
 
 .product:hover .product__button {
-  position: absolute;
   display: block;
-  left: center;
-  bottom: -53px;
-  z-index: 11;
 }
 
 .product:hover::after {
@@ -243,4 +243,69 @@ a:active {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+
+/* О магазине Глейси */
+
+.about-gllacy {
+  background-image: url("../img/bg_waffle-pattern.jpg");
+  border-radius: 16px;
+  padding: 24px 20px;
+}
+
+.about-gllacy__description {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #323232;
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  position: relative;
+  padding: 21px 0 12px 55px;
+  font-size: 16px;
+  line-height: 1.37;
+  color: #323232;
+  width: 48%;
+}
+
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 10px;
+  left: 0px;
+  width: 49px;
+  height: 49px;
+  border: 2px solid #323232;
+  border-radius: 50%;
+}
+
+.advantages__item--ice::before {
+  background-image: url(../img/bullet_ice.svg);
+}
+
+.advantages__item--cow::before {
+  background-image: url(../img/bullet_cow.svg);
+}
+
+.advantages__item--leaf::before {
+  background-image: url(../img/bullet_leaf.svg);
+}
+
+.advantages__item--thermo::before {
+  background-image: url(../img/bullet_thermo.svg);
 }
