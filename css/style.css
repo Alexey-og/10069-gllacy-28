@@ -199,6 +199,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  z-index: 11;
 }
 
 .product__image {
@@ -451,19 +452,16 @@ button {
 /* Нижнее меню */
 
 .bottom-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-between;
-  width: 40%;
-  padding: 0 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
 }
 
 .bottom-menu__item {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 0 30px 5px 0;
+  margin: 0 10px 5px 22px;
   font-size: 13px;
   line-height: 1.38;
 }
