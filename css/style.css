@@ -237,8 +237,8 @@ button {
   align-items: center;
   top: 36px;
   right: 0;
-  height: 84px;
   width: 341px;
+  height: 84px;
   padding: 20px 15px;
   background: #F8F7F4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
@@ -262,8 +262,12 @@ button {
   color: #999999;
 }
 
-
 .login {
+  position: relative;
+  margin-right: 10px;
+}
+
+.login__icon {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -271,12 +275,89 @@ button {
   width: 92px;
   height: 32px;
   padding: 6px 16px;
+  background-position: 16px 6px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-login.svg");
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
   text-decoration: none;
 }
 
+.login__icon:hover {
+  background-color: #ffffff;
+  background-image: url("../img/icon-login-black.svg");
+  color: #323232;
+}
 
+.login__icon:hover + .login__form {
+  display: grid;
+  animation: bounce 0.4s;
+}
+
+.login__icon:hover::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 50px;
+  left: -10px;
+  top: 0;
+  z-index: 3;
+}
+
+.login__form {
+  position: absolute;
+  display: none;
+  row-gap: 20px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 44px 44px 44px;
+  top: 36px;
+  right: 0;
+  width: 277px;
+  height: 214px;
+  padding: 20px 17px 22px 19px;
+  background-color: #F8F7F4;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.login__form:hover {
+  display: grid;
+}
+
+.login__input {
+  grid-column: 1 / -1;
+  padding: 15px;
+  width: 100%;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid #D3D3D2;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.login__button {
+  margin-right: 20px;
+}
+
+.login__password {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 0px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #323232;
+}
+
+.login__password a {
+  text-decoration-color: rgba(50, 50, 50, 0.3);
+}
 
 /* Слайдер с мороженым */
 
@@ -285,7 +366,7 @@ button {
   background-position: top center;
 }
 
- .index-body--1 {
+.index-body--1 {
   background-image: url("../img/ice-slide-1.png");
 }
 
