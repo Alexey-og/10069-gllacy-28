@@ -210,7 +210,8 @@ button {
   background-image: url("../img/icon-search.svg");
 }
 
-.search__icon:hover {
+.search__icon:hover,
+.search__icon:focus {
   background-color: #ffffff;
   background-image: url("../img/icon-search-black.svg");
 }
@@ -225,7 +226,8 @@ button {
   z-index: 3;
 }
 
-.search__icon:hover + .search__form {
+.search__icon:hover + .search__form,
+.search__icon:focus + .search__form {
   display: flex;
   animation: bounce 0.4s;
 }
@@ -245,7 +247,12 @@ button {
   border-radius: 4px;
 }
 
-.search__form:hover {
+.search__form-show {
+  display: flex;
+}
+
+.search__form:hover,
+.search__form:focus {
   display: flex;
 }
 
@@ -260,6 +267,10 @@ button {
   font-size: 14px;
   line-height: 16px;
   color: #999999;
+}
+
+.search__form .search__input:focus {
+  display: flex;
 }
 
 .login {
@@ -286,13 +297,15 @@ button {
   text-decoration: none;
 }
 
-.login__icon:hover {
+.login__icon:hover,
+.login__icon:focus {
   background-color: #ffffff;
   background-image: url("../img/icon-login-black.svg");
   color: #323232;
 }
 
-.login__icon:hover + .login__form {
+.login__icon:hover + .login__form,
+.login__icon:focus + .login__form {
   display: grid;
   animation: bounce 0.4s;
 }
@@ -323,7 +336,8 @@ button {
   border-radius: 4px;
 }
 
-.login__form:hover {
+.login__form:hover,
+.login__form:focus {
   display: grid;
 }
 
@@ -339,6 +353,10 @@ button {
   font-size: 14px;
   line-height: 16px;
   color: #999999;
+}
+
+.login__form .login__input:focus {
+  display: flex;
 }
 
 .login__button {
