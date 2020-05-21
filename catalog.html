@@ -81,51 +81,50 @@
         <li><a>Сливочное</a></li>
       </ul>
 
-      <section>
-        <h2 class="visually-hidden">Фильтр подбора мороженого</h2>
-        <form action="https://echo.htmlacademy.ru/" method="POST">
-          <article>
-            <h3>Сортировка:</h3>
-            <div> <!-- Декоративная обёртка -->
-              <select name="sorting">
-                <option value="popularity">по популярности</option>
-                <option value="inexpensive">сначала недорогие</option>
-                <option value="expensive">сначала дорогие</option>
-                <option value="fat">по жирности</option>
-              </select>
-            </div>
-          </article>
-          <article>
-            <h3>Цена: 100 ₽ &ndash; 500 ₽</h3>
-            <div> <!-- Декоративная обёртка -->
-              <div></div> <!-- Линейка - общий диапазон -->
-              <div></div> <!-- Линейка - выбранный диапазон -->
-              <button></button> <!-- Левый ползунок -->
-              <button></button> <!-- Правый ползунок -->
-            </div>
-          </article>
-          <article>
-            <h3>Жирность</h3>
-            <div> <!-- Декоративная обёртка -->
-              <label><input type="radio" name="fat" value="0">0%</label>
-              <label><input type="radio" name="fat" value="less_10" checked>до 10%</label>
-              <label><input type="radio" name="fat" value="less_30">до 30%</label>
-              <label><input type="radio" name="fat" value="above_30">выше 30%</label>
-            </div>
-          </article>
-          <article>
-            <h3>Наполнители:</h3>
-            <div> <!-- Декоративная обёртка -->
-              <label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
-              <label><input type="checkbox" name="filler" value="sugar_sprinkles" checked>сахарные присыпки</label>
-              <label><input type="checkbox" name="filler" value="fruits">фрукты</label>
-              <label><input type="checkbox" name="filler" value="syrups">сиропы</label>
-              <label><input type="checkbox" name="filler" value="jams">джемы</label>
-            </div>
-          </article>
-          <button type="submit">Применить</button>
-        </form>
-      </section>
+      <h2 class="visually-hidden">Фильтр подбора мороженого</h2>
+
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="POST">
+        <article class="filter__item filter-sorting">
+          <h3 class="filter__title">Сортировка:</h3>
+          <div class="filter__wrapper">
+            <select name="sorting">
+              <option value="popularity">по популярности</option>
+              <option value="inexpensive">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
+          </div>
+        </article>
+        <article class="filter__item filter-range">
+          <h3 class="filter__title">Цена: 100 ₽ &ndash; 500 ₽</h3>
+          <div class="filter__wrapper">
+            <div></div> <!-- Линейка - общий диапазон -->
+            <div></div> <!-- Линейка - выбранный диапазон -->
+            <button></button> <!-- Левый ползунок -->
+            <button></button> <!-- Правый ползунок -->
+          </div>
+        </article>
+        <article class="filter__item filter-fat">
+          <h3 class="filter__title">Жирность</h3>
+          <div class="filter__wrapper">
+            <input type="radio" name="fat" value="0" id="fat-0"><label for="fat-0">0%</label>
+            <input type="radio" name="fat" value="less-10" id="less-10" checked><label for="less-10">до 10%</label>
+            <input type="radio" name="fat" value="less-30" id="less-30"><label for="less-30">до 30%</label>
+            <input type="radio" name="fat" value="above-30" id="above-30"><label for="above-30">выше 30%</label>
+          </div>
+        </article>
+        <article class="filter__item filter-filler">
+          <h3 class="filter__title">Наполнители:</h3>
+          <div class="filter__wrapper">
+            <input type="checkbox" name="filler" value="chocolate" id="chocolate" checked><label for="chocolate">шоколадные</label>
+            <input type="checkbox" name="filler" value="sugar-sprinkles" id="sugar-sprinkles" checked><label for="sugar-sprinkles">сахарные присыпки</label>
+            <input type="checkbox" name="filler" value="fruits" id="fruits"><label for="fruits">фрукты</label>
+            <input type="checkbox" name="filler" value="syrups" id="syrups"><label for="syrups">сиропы</label>
+            <input type="checkbox" name="filler" value="jams" id="jams"><label for="jams">джемы</label>
+          </div>
+        </article>
+        <button class="filter__button" type="submit">Применить</button>
+      </form>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого Глэйси</h2>
