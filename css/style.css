@@ -75,6 +75,7 @@ html {
 
 body {
   position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   background-color: #849D8F;
   max-width: 1200px;
   margin: 0 auto;
@@ -217,7 +218,8 @@ button {
 }
 
 .main-menu__link:hover + .sub-menu,
-.main-menu__link:focus + .sub-menu {
+.main-menu__link:focus + .sub-menu,
+.main-menu__link:focus-within + .sub-menu {
   display: flex;
   animation: slide-down 0.2s;
 }
@@ -1063,7 +1065,7 @@ button {
 
 
 .filter {
-  width: 869px;
+  width: 880px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -1071,26 +1073,16 @@ button {
 }
 
 .filter * {
-  color: inherit;
+  color: #ffffff;
 }
 
 .filter__item {
-  margin-top: 13px;
-}
-
-.filter__title {
-  margin: 0 0 7px 16px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.filter__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   height: 36px;
+  margin: 38px 15px 0 0;
   padding: 3px 16px;
-  margin-right: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   font-weight: 500;
@@ -1098,31 +1090,96 @@ button {
   line-height: 18px;
 }
 
-.filter__wrapper label {
+.filter__title {
+  position: absolute;
+  left: 16px;
+  top: -23px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter__item label {
   display: flex;
   align-items: center;
 }
 
-.filter-sorting .filter__wrapper {
-  background-color: #ffffff;
-}
 
 .filter-sorting select {
   border-width: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  color: #323232;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
 }
 
 .filter-sorting option {
   font-size: 14px;
   line-height: 22px;
+  background-color: #ffffff;
+  color: #323232;
 }
 
+.filter-sorting:hover,
+.filter-sorting:hover > select,
+.filter-sorting select:hover {
+  background-color: #ffffff;
+  color: #323232;
+}
 
+.filter-sorting:hover > .filter__title {
+  color: #ffffff;
+}
+
+.filter-range {
+  position: relative;
+  width: 218px;
+  padding: 5px 21px;
+}
+
+.filter-range__row {
+  position: absolute;
+  height: 2px;
+  top: 17px;
+}
+
+.filter-range__row--common {
+  width: 176px;
+  left: 21px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.filter-range__row--inner {
+  width: 106px;
+  left: 37px;
+  background-color: #F8F7F4;
+}
+
+.filter-range__button {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  top: 8px;
+  background-image: url("../img/icon-range-button.svg");
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.filter-range__button:hover {
+  cursor: pointer;
+}
+
+.filter-range__button--left {
+  left: 34px;
+}
+
+.filter-range__button--right {
+  right: 66px;
+}
 
 .filter-fat {
+  margin-right: 0;
   padding: 3px 17px 2px 14px;
 }
 
@@ -1179,7 +1236,7 @@ button {
 }
 
 
-.filter-filler .filter__wrapper {
+.filter-filler {
   padding: 3px 20px 3px 16px;
 }
 
@@ -1248,6 +1305,15 @@ button {
   line-height: 18px;
 }
 
+.filter__button:hover {
+  background-color: #FFFFFF;
+  color: #323232;
+}
+
+.filter__button:active {
+  border-width: 0;
+  box-shadow: inset 0px 2px 1px #696969;
+}
 
 
 
