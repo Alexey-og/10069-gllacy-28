@@ -100,7 +100,7 @@ a:active {
   text-decoration-color: rgba(255, 188, 158, 0.3);
 }
 
-input {
+input, textarea {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -1065,7 +1065,7 @@ button {
 
 
 .filter {
-  width: 880px;
+  width: 870px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -1106,8 +1106,21 @@ button {
 }
 
 
+.filter-sorting {
+  width: 196px;
+  padding: 3px 14px 5px 3px;
+}
+
 .filter-sorting select {
+  width: 196px;
+  padding-left: 13px;
   border-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../img/icon-select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right top 5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -1127,6 +1140,10 @@ button {
 .filter-sorting select:hover {
   background-color: #ffffff;
   color: #323232;
+}
+
+.filter-sorting:hover > select {
+  background-image: url("../img/icon-select-arrow-black.svg");
 }
 
 .filter-sorting:hover > .filter__title {
@@ -1237,6 +1254,7 @@ button {
 
 
 .filter-filler {
+  width: 709px;
   padding: 3px 20px 3px 16px;
 }
 
@@ -1311,9 +1329,116 @@ button {
 }
 
 .filter__button:active {
+  padding: 3px 31px;
   border-width: 0;
   box-shadow: inset 0px 2px 1px #696969;
+  z-index: 14;
 }
+
+
+/* Попап */
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 14;
+}
+
+.modal-feedback {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  margin-left: -238px;
+  margin-top: -220px;
+  width: 477px;
+  min-height: 441px;
+  background-color: #F8F7F4;
+  border-radius: 6px;
+  padding: 20px 23px;
+  z-index: 15;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  background-image: url("../img/icon-close-big.svg");
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-feedback__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+}
+
+.modal-feedback__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 22px 0 7px 0;
+}
+
+.modal-feedback__form input {
+  width: 267px;
+  margin-bottom: 20px;
+}
+
+.modal-feedback__form textarea {
+  padding: 16px 14px;
+  margin-bottom: 25px;
+  height: 154px;
+  resize: none;
+}
+
+.modal-feedback__form input::placeholder,
+.modal-feedback__form textarea::placeholder {
+  font-weight: normal;
+  color: #999999;
+}
+
+.modal-feedback__form input,
+.modal-feedback__form textarea {
+  font-weight: bold;
+  color: #323232;
+}
+
+.modal-feedback__form input:hover,
+.modal-feedback__form textarea:hover {
+  border-width: 2px;
+}
+
+.modal-feedback__form input:active,
+.modal-feedback__form textarea:active {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.modal-feedback__button {
+  align-self: flex-end;
+  width: 140px;
+}
+
+.modal-show {
+  display: block;
+}
+
+
+
+
 
 
 
