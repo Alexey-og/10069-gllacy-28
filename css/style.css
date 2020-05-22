@@ -1493,8 +1493,50 @@ button {
 
 
 
+/*  Пагинатор  */
 
+.paginator {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 40px 0 29px;
+}
 
+.paginator * {
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+}
+
+.paginator__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.paginator__page:hover,
+.paginator__page--active {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.paginator__prev {
+  background-image: url("../img/icon-paginator-left.svg");
+  margin-right: 4px;
+  opacity: 0.2;
+}
+
+.paginator__next {
+  background-image: url("../img/icon-paginator-right.svg");
+  margin-left: 6px;
+}
 
 
 /* Футер */
