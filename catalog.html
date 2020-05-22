@@ -48,14 +48,14 @@
           <div class="basket__goods">
             <article class="basket-list">
               <div class="basket-item">
-                <span class="basket-item__delete"></span>
+                <button class="basket-item__delete"></button>
                 <img class="basket-item__image" src="img/ice-creamy-w-orange-jam.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                 <a class="basket-item__title" href="">Пломбир с апельсиновым джемом</a>
                 <p class="basket-item__amount">1,5 кг х <span class="basket-item__cost">200 руб.</span></p>
                 <p class="basket-item__price">300 руб.</p>
               </div>
               <div class="basket-item">
-                <span class="basket-item__delete"></span>
+                <button class="basket-item__delete"></button>
                 <img class="basket-item__image" src="img/ice-creamy-strawberry-w-white-chocolate.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
                 <a class="basket-item__title" href="">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</a>
                 <p class="basket-item__amount">1,5 кг х <span class="basket-item__cost">300 руб.</span></p>
@@ -74,12 +74,14 @@
     </header>
 
     <main>
-      <h1>Сливочное мороженое</h1>
-      <ul>
-        <li><a href="/">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a>Сливочное</a></li>
-      </ul>
+
+      <div class="breadcrumbs">
+        <a class="breadcrumbs__item" href="/">Главная</a>
+        <a class="breadcrumbs__item" href="catalog.html">Каталог</a>
+        <span class="breadcrumbs__item breadcrumbs__item--active">Сливочное</span>
+      </div>
+
+      <h1 class="page-title">Сливочное мороженое</h1>
 
       <h2 class="visually-hidden">Фильтр подбора мороженого</h2>
 
