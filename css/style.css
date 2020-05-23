@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
       url("../fonts/Roboto-Bold.woff") format("woff");
@@ -23,7 +23,9 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @keyframes bounce {
   0% {
@@ -80,7 +82,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 9px 27px;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1094,7 +1096,12 @@ button {
   position: absolute;
   top: 62px;
   right: 27px;
-  z-index: 3;
+  z-index: 5;
+}
+.gllacy-map__interactive {
+  height: 430px;
+  width: 100%;
+  z-index: 4;
 }
 
 .gllacy-contacts {
