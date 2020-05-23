@@ -231,7 +231,7 @@ button {
 .main-menu__link:focus + .sub-menu,
 .main-menu__link:focus-within + .sub-menu {
   display: flex;
-  /* animation: slide-down 0.2s; */
+  animation: slide-down 0.2s;
 }
 
 .main-menu__link:hover::before {
@@ -331,20 +331,20 @@ button {
   background-image: url("../img/icon-search-black.svg");
 }
 
+.search__icon:hover + .search__form,
+.search__icon:focus + .search__form {
+  display: flex;
+  animation: bounce 0.4s;
+}
+
 .search__icon:hover::before {
   position: absolute;
   content: "";
-  width: 140px;
+  width: 130px;
   height: 50px;
   left: -100px;
   top: 0;
   z-index: 5;
-}
-
-.search__icon:hover + .search__form,
-.search__icon:focus + .search__form {
-  display: flex;
-  /* animation: bounce 0.4s; */
 }
 
 .search__form {
@@ -360,10 +360,7 @@ button {
   background: #F8F7F4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-}
-
-.search__form-show {
-  display: flex;
+  z-index: 3;
 }
 
 .search__form:hover,
@@ -417,7 +414,7 @@ button {
 .login__icon:hover + .login__form,
 .login__icon:focus + .login__form {
   display: grid;
-  /* animation: bounce 0.4s; */
+  animation: bounce 0.4s;
 }
 
 .login__icon:hover::before {
@@ -524,7 +521,7 @@ button {
 .basket__icon--not-empty:hover + .basket__goods,
 .basket__icon--not-empty:focus + .basket__goods {
   display: flex;
-  /* animation: bounce 0.4s; */
+  animation: bounce 0.4s;
 }
 
  .basket__icon--not-empty:hover::before {
@@ -709,7 +706,7 @@ button {
 
 .index-body--3 {
   background-color: #9D8B84;
-  background-image: url("../img/ice-slide-2.png");
+  background-image: url("../img/ice-slide-3.png");
 }
 
 .ice-slider {
@@ -726,22 +723,14 @@ button {
 }
 
 .ice-slide {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
 
-.ice-slide--1 {
+.slide-show {
   display: flex;
-}
-
-.ice-slide--2 {
-  display: none;
-}
-
-.ice-slide--3 {
-  display: none;
 }
 
 .ice-slide__title {
@@ -1029,7 +1018,7 @@ button {
 .blog-news__link {
   display: inline-block;
   width: 290px;
-  padding-bottom: -5px;
+  margin-bottom: -5px;
   font-weight: bold;
   font-size: 24px;
   line-height: 1.25;

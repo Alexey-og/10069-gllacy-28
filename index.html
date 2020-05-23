@@ -27,15 +27,15 @@
         <h2 class="visually-hidden">Личный кабинет пользователя</h2>
         <div class="search">
           <a class="search__icon" href="" aria-label="Поиск по сайту"></a>
-          <form class="search__form" action="">
-            <input class="search__input" type="text" placeholder="Крем-брюле" tabindex="0">
+          <form class="search__form" action="https://echo.htmlacademy.ru/" method="POST">
+            <input class="search__input" type="text" name="text" placeholder="Крем-брюле">
           </form>
         </div>
         <div class="login">
           <a class="login__icon" href="">Вход</a>
-          <form class="login__form" action="">
-            <input class="login__input" type="email" placeholder="email@example.com">
-            <input class="login__input" type="password" placeholder="......">
+          <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+            <input class="login__input" type="email" name="email" placeholder="email@example.com">
+            <input class="login__input" type="password" name="password" placeholder="......">
             <button class="button login__button" type="submit">Войти</button>
             <div class="login__registration">
               <a href="">Забыли пароль?</a>
@@ -60,13 +60,12 @@
       <h1 class="visually-hidden">Магазин Глэйси &mdash; мороженое собственного производства на развес</h1>
       <section class="ice-slider">
         <h2 class="visually-hidden">Слайдер: выбор сладкой парочки</h2>
-        <!-- Листалка слайдов -->
         <div class="slide-switcher">
-          <a class="slide-switcher__item slide-switcher__item--active" href=""></a>
-          <a class="slide-switcher__item" href=""></a>
-          <a class="slide-switcher__item" href=""></a>
+          <a class="slide-switcher__item slide-switcher__item-1 slide-switcher__item--active" href=""></a>
+          <a class="slide-switcher__item slide-switcher__item-2" href=""></a>
+          <a class="slide-switcher__item slide-switcher__item-3" href=""></a>
         </div>
-        <article class="ice-slider__item ice-slide ice-slide--1">
+        <article class="ice-slider__item ice-slide ice-slide--1 slide-show">
           <h3 class="ice-slide__title">Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</h3>
           <a class="button ice-slide__button" href="">Давайте оба!</a>
         </article>
@@ -142,7 +141,7 @@
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <form class="mailing__form" action="">
             <p class="mailing__description">Подпишитесь на нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно&nbsp;=)</p>
-            <input class="mailing__email" type="email" placeholder="email@example.com">
+            <input class="mailing__email" type="email" name="email" placeholder="email@example.com">
             <button class="button mailing__button" type="submit">Отправить</button>
           </form>
         </article>
@@ -191,7 +190,7 @@
       <button class="modal-close" type="button"></button>
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="modal-feedback__title">Мы обязательно вам ответим!</p>
-      <form class="modal-feedback__form" action="" method="POST">
+      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru/" method="POST">
         <input type="text" name="name" placeholder="Имя Фамилия">
         <input type="email" name="email" placeholder="email@example.com">
         <textarea name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
