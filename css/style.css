@@ -711,6 +711,7 @@ button {
 }
 
 .ice-slider {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -762,6 +763,29 @@ button {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
+.slide-switcher {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  display: flex;
+}
+
+.slide-switcher__item {
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.slide-switcher__item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slide-switcher__item:active,
+.slide-switcher__item--active {
+  background-color: #ffffff;
+}
 
 
 /* Спецпредложения */
