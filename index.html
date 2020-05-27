@@ -2,11 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Глейси</title>
   </head>
   <body class="index-body">
-    <header class="page-header">
+    <header>
       <nav class="main-nav">
         <a class="main-nav__logo"></a>
         <ul class="main-nav__menu main-menu">
@@ -80,7 +81,7 @@
         </article>
       </section>
 
-      <section class="banners special_offers">
+      <section class="special_offers">
         <h2 class="visually-hidden">Спецпредложения</h2>
         <article class="special_offers__item special_offer special_offer--raspberry">
           <h3 class="special_offer__title">Малинка даром!</h3>
@@ -94,7 +95,7 @@
         </article>
       </section>
 
-      <section class="catalog catalog--bestsellers">
+      <section class="catalog catalog--bestsellers grid-container">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <article class="product">
           <h3 class="product__title"><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -133,29 +134,28 @@
         </ul>
       </section>
 
-      <div class="banners">
-        <article class="blog-news">
-          <h2 class="blog-news__title">Новое в нашем блоге</h2>
-          <a class="blog-news__link" href="">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
-        </article>
-        <article class="mailing">
-          <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <form class="mailing__form" action="">
-            <p class="mailing__description">Подпишитесь на нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно&nbsp;=)</p>
-            <input class="mailing__email" type="email" name="email" placeholder="email@example.com">
-            <button class="button mailing__button" type="submit">Отправить</button>
-          </form>
-        </article>
-      </div>
+      <article class="blog-news">
+        <h2 class="blog-news__title">Новое в нашем блоге</h2>
+        <a class="blog-news__link" href="">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
+      </article>
+      <article class="mailing">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <form class="mailing__form" action="">
+          <p class="mailing__description">Подпишитесь на нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно&nbsp;=)</p>
+          <input class="mailing__email" type="email" name="email" placeholder="email@example.com">
+          <button class="button mailing__button" type="submit">Отправить</button>
+        </form>
+      </article>
+
 
       <section class="gllacy-map">
         <h2 class="visually-hidden">Как найти магазин Глэйси</h2>
         <img class="gllacy-map__pin" src="img/map-pin.svg" width="80" height="140" alt="Магазин Глэйси на карте">
         <div class="gllacy-map__interactive">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5004cc29b91cd5925740e93eca80ec6b32fd8f59d4b0223c4d0420807db77d7&amp;source=constructor" width="1200" height="430" frameborder="0"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5004cc29b91cd5925740e93eca80ec6b32fd8f59d4b0223c4d0420807db77d7&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
         </div>
         <article class="gllacy-map__contacts gllacy-contacts">
-          <h3 class="visually-hidden">Контакты главного офиса и офлайн-магазина</h2>
+          <h3 class="visually-hidden">Контакты главного офиса и офлайн-магазина</h3>
           <p class="gllacy-contacts__address-title">Адрес главного офиса и&nbsp;офлайн-магазина:</p>
           <p class="gllacy-contacts__address">ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
           <p class="gllacy-contacts__phone-title">Для заказов по телефону:</p>
@@ -200,7 +200,7 @@
     </section>
 
     <script src="js/index.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
 
   </body>
 </html>

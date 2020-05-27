@@ -65,10 +65,6 @@ slideButton3.addEventListener("click", function (evt) {
 
 
 
-document.querySelector(".gllacy-map__pin").classList.add("visually-hidden");
-
-
-
 
 var feedbackButton = document.querySelector(".gllacy-contacts__button");
 var popup = document.querySelector(".modal-feedback");
