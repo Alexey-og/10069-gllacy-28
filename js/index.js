@@ -12,12 +12,12 @@ var iceSlide1 = document.querySelector(".ice-slide--1");
 var iceSlide2 = document.querySelector(".ice-slide--2");
 var iceSlide3 = document.querySelector(".ice-slide--3");
 indexBody.style.backgroundColor = "#849D8F";
-indexBody.style.backgroundImage = "url('img/ice-slide-1.png')";
+indexBody.style.backgroundImage = "url('img/ice-slide-1.jpg')";
 
 slideButton1.addEventListener("click", function (evt) {
   evt.preventDefault();
   indexBody.style.backgroundColor = "#849D8F";
-  indexBody.style.backgroundImage = "url('img/ice-slide-1.png')";
+  indexBody.style.backgroundImage = "url('img/ice-slide-1.jpg')";
   /* bodyImage = "url('../img/ice-slide-1.png')"; */
 
   iceSlide2.classList.remove("slide-show");
@@ -31,7 +31,7 @@ slideButton1.addEventListener("click", function (evt) {
 slideButton2.addEventListener("click", function (evt) {
   evt.preventDefault();
   indexBody.style.backgroundColor = "#8996A6";
-  indexBody.style.backgroundImage = "url('img/ice-slide-2.png')";
+  indexBody.style.backgroundImage = "url('img/ice-slide-2.jpg')";
   /* bodyImage = "url('../img/ice-slide-2.png')"; */
   /* indexBody.classList.remove("index-body--1");
   indexBody.classList.remove("index-body--3"); */
@@ -46,7 +46,7 @@ slideButton2.addEventListener("click", function (evt) {
 slideButton3.addEventListener("click", function (evt) {
   evt.preventDefault();
   indexBody.style.backgroundColor = "#9D8B84";
-  indexBody.style.backgroundImage = "url('img/ice-slide-3.png')";
+  indexBody.style.backgroundImage = "url('img/ice-slide-3.jpg')";
   /* bodyImage = "url('../img/ice-slide-3.png')"; */
   /* indexBody.classList.remove("index-body--1");
   indexBody.classList.remove("index-body--2"); */
