@@ -680,13 +680,13 @@ button {
   color: var(--white);
 }
 
-.breadcrumbs__item {
+.breadcrumbs a {
   display: flex;
   position: relative;
   margin-right: 22px;
 }
 
-.breadcrumbs__item:not(:last-child)::after {
+.breadcrumbs a:not(:last-child)::after {
   position: absolute;
   content: "";
   width: 6px;
@@ -697,17 +697,6 @@ button {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.breadcrumbs__link {
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px solid var(--white-op02);
-}
-
-.breadcrumbs__link:hover {
-  border-width: 0;
-}
-
 
 
 
