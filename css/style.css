@@ -1080,8 +1080,7 @@ button {
 }
 
 
-
-
+/*  Форма с фильтром подбора мороженого  */
 
 .filter {
   grid-column: 1 / -1;
@@ -1094,42 +1093,46 @@ button {
 }
 
 .filter * {
+  font-weight: 500;
   color: var(--white);
 }
 
 .filter__item {
   position: relative;
+  margin: 14px 15px 0 0;
+  padding: 0;
+  min-height: 56px;
+  border-width: 1px;
+  border-color: red;
+}
+
+.filter__title {
+  margin: 0 0 7px 16px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter__sausage {
   display: flex;
   align-items: center;
-  height: 36px;
-  margin: 38px 15px 0 0;
   padding: 3px 16px;
-  background-color: var(--white-op02);
   border-radius: 20px;
-  font-weight: 500;
+  background-color: var(--white-op02);
+  min-height: 36px;
   font-size: 16px;
   line-height: 18px;
 }
 
-.filter__title {
-  position: absolute;
-  left: 16px;
-  top: -23px;
-  margin: 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-}
+
 
 .filter__item label {
   display: flex;
   align-items: center;
 }
 
-
 .filter-sorting {
   width: 196px;
-  padding: 3px 14px 5px 3px;
+  /* padding: 3px 14px 5px 3px; */
 }
 
 .filter-sorting select {
@@ -1142,7 +1145,6 @@ button {
   background-image: url("../img/icon-select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right top 5px;
-  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   background-color: rgba(255, 255, 255, 0);
@@ -1174,7 +1176,7 @@ button {
 .filter-range {
   position: relative;
   width: 218px;
-  padding: 5px 21px;
+  /* padding: 5px 21px; */
 }
 
 .filter-range__row {
@@ -1218,7 +1220,7 @@ button {
 
 .filter-fat {
   margin-right: 0;
-  padding: 3px 17px 2px 14px;
+  /* padding: 3px 17px 2px 14px; */
 }
 
 .filter-fat label {
@@ -1272,7 +1274,7 @@ button {
 
 .filter-filler {
   width: 709px;
-  padding: 3px 20px 3px 16px;
+  /* padding: 3px 20px 3px 16px; */
 }
 
 .filter-filler label {

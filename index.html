@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Глейси</title>
   </head>
-  <body class="index-body">
+  <body class="index-body index-body--1">
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav__logo"></a>
@@ -64,9 +64,9 @@
       <section class="ice-slider">
         <h2 class="visually-hidden">Слайдер: выбор сладкой парочки</h2>
         <div class="slide-switcher">
-          <a class="slide-switcher__item slide-switcher__item-1 slide-switcher__item--active" href=""></a>
-          <a class="slide-switcher__item slide-switcher__item-2" href=""></a>
-          <a class="slide-switcher__item slide-switcher__item-3" href=""></a>
+          <a class="slide-switcher__item slide-switcher__item--active" data-slide="1" href=""></a>
+          <a class="slide-switcher__item" data-slide="2" href=""></a>
+          <a class="slide-switcher__item" data-slide="3" href=""></a>
         </div>
         <article class="ice-slider__item ice-slide ice-slide--1 slide-show">
           <h3 class="ice-slide__title">Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</h3>
@@ -153,7 +153,7 @@
         <h2 class="visually-hidden">Как найти магазин Глэйси</h2>
         <img class="gllacy-map__pin" src="img/map-pin.svg" width="80" height="140" alt="Магазин Глэйси на карте">
         <div class="gllacy-map__interactive">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5004cc29b91cd5925740e93eca80ec6b32fd8f59d4b0223c4d0420807db77d7&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
+          <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5004cc29b91cd5925740e93eca80ec6b32fd8f59d4b0223c4d0420807db77d7&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe> -->
         </div>
         <article class="gllacy-map__contacts gllacy-contacts">
           <h3 class="visually-hidden">Контакты главного офиса и офлайн-магазина</h3>
@@ -199,6 +199,7 @@
         <button class="button modal-feedback__button" type="submit">Отправить</button>
       </form>
     </section>
+
 
     <script src="js/index.js"></script>
     <script src="js/script.js"></script>
