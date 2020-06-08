@@ -15,7 +15,7 @@
           <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="catalog.html">Каталог</a>
             <div class="main-menu__sub-menu sub-menu">
               <span class="sub-menu__title">Новинки</span>
-              <a class="sub-menu__link sub-menu__link--active" href="catalog.html">Сливочное</a>
+              <a class="sub-menu__link sub-menu__link--current" href="catalog.html">Сливочное</a>
               <a class="sub-menu__link" href="">Щербеты</a>
               <a class="sub-menu__link" href="">Фруктовый лед</a>
               <a class="sub-menu__link" href="">Мелорин</a>
@@ -90,22 +90,21 @@
       <form class="filter" action="https://echo.htmlacademy.ru/" method="GET">
         <fieldset class="filter__item filter-sorting">
           <legend class="filter__title">Сортировка:</legend>
-          <div class="filter__sausage">
-            <select name="sorting">
-              <option value="popularity">по популярности</option>
-              <option value="inexpensive">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="fat">по жирности</option>
-            </select>
-          </div>
+          <select name="sorting filter__sausage">
+            <option value="popularity">по популярности</option>
+            <option value="inexpensive">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
         </fieldset>
         <fieldset class="filter__item filter-range">
           <legend class="filter__title">Цена: 100 ₽ &ndash; 500 ₽</legend>
           <div class="filter__sausage">
-            <div class="filter-range__row filter-range__row--common"></div>
-            <div class="filter-range__row filter-range__row--inner"></div>
-            <button class="filter-range__button filter-range__button--left"></button>
-            <button class="filter-range__button filter-range__button--right"></button>
+            <div class="filter-range__row">
+              <div class="filter-range__row filter-range__row--inner"></div>
+            </div>
+            <svg class="filter-range__button filter-range__button--left" width="20" height="22"><use xlink:href="#icon-range-button"></use></svg>
+            <svg class="filter-range__button filter-range__button--right" width="20" height="22"><use xlink:href="#icon-range-button"></use></svg>
           </div>
         </fieldset>
         <fieldset class="filter__item filter-fat">
@@ -236,6 +235,29 @@
         <p class="html-academy__copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
       </div>
     </footer>
+
+    <svg style="display: none;">
+      <symbol id="icon-range-button" viewBox="0 0 22 25">
+        <path opacity="0.3" d="M11 22.7272C8.08262 22.7272 5.28473 21.5299 3.22183 19.3988C1.15893 17.2677 0 14.3773 0 11.3635L0 13.6363C0 16.6501 1.15893 19.5405 3.22183 21.6716C5.28473 23.8027 8.08262 24.9999 11 24.9999C13.9174 24.9999 16.7153 23.8027 18.7782 21.6716C20.8411 19.5405 22 16.6501 22 13.6363V11.3635C22 14.3773 20.8411 17.2677 18.7782 19.3988C16.7153 21.5299 13.9174 22.7272 11 22.7272Z" fill="#ABABAB"/>
+        <path d="M11 22.7273C17.0751 22.7273 22 17.6396 22 11.3636C22 5.08767 17.0751 0 11 0C4.92487 0 0 5.08767 0 11.3636C0 17.6396 4.92487 22.7273 11 22.7273Z" fill="white"/>
+        <path d="M10.9998 13.6363C12.2148 13.6363 13.1998 12.6187 13.1998 11.3635C13.1998 10.1084 12.2148 9.09082 10.9998 9.09082C9.78478 9.09082 8.7998 10.1084 8.7998 11.3635C8.7998 12.6187 9.78478 13.6363 10.9998 13.6363Z" fill="#ABABAB"/>
+      </symbol>
+    </svg>
+
+
+
+
+    <!-- <svg style="display: none;">
+      <symbol id="icon-range-button" viewBox="0 0 20 22">
+        <path opacity="0.3" d="M10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10L0 12C0 14.6522 1.05357 17.1957 2.92893 19.0711C4.8043 20.9464 7.34784 22 10 22C12.6522 22 15.1957 20.9464 17.0711 19.0711C18.9464 17.1957 20 14.6522 20 12V10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20Z" fill="#ABABAB"/>
+      <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="white"/>
+      <path d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z" fill="#ABABAB"/>
+      </symbol>
+    </svg> -->
+
+
+
+
 
     <script src="js/script.js"></script>
 
