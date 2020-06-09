@@ -1107,7 +1107,7 @@ button {
 
 .filter {
   grid-column: 1 / -1;
-  width: 900px;
+  width: 870px;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -1119,6 +1119,7 @@ button {
 .filter * {
   font: inherit;
   color: inherit;
+  cursor: pointer;
 }
 
 .filter__item {
@@ -1205,7 +1206,6 @@ button {
 .filter-range__button:hover {
   width: 22px;
   height: 25px;
-  cursor: pointer;
 }
 
 .filter-range__button--left {
@@ -1214,6 +1214,10 @@ button {
 
 .filter-range__button--right {
   right: 66px;
+}
+
+.filter-fat {
+  margin-right: 0;
 }
 
 .filter-fat .filter__sausage {
@@ -1233,7 +1237,6 @@ button {
   position: relative;
   padding-left: 33px;
   margin-right: 19px;
-  cursor: pointer;
 }
 
 .filter-fat label:last-child {
@@ -1268,7 +1271,6 @@ button {
   border-color: var(--white);
 }
 
-.filter-fat label:hover::after,
 .filter-fat input:checked + label:hover::after {
   background-color: var(--white);
 }
@@ -1300,9 +1302,17 @@ button {
 }
 
 
-.filter-filler {
-  width: 709px;
-  /* padding: 3px 20px 3px 16px; */
+.filter-filler .filter__sausage  {
+  /* width: 709px; */
+  padding: 3px 21px 3px 16px;
+}
+
+.filter-filler input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
 .filter-filler label {
@@ -1327,7 +1337,7 @@ button {
   left: 0;
   background-position: left;
   background-repeat: no-repeat;
-  background-image: url("../img/bullet-checkbox.svg");
+  background-image: url("../img/icon-checkbox.svg");
   opacity: 0.8;
 }
 
@@ -1335,20 +1345,17 @@ button {
   opacity: 1;
 }
 
-.filter-filler input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-}
-
 .filter-filler input:checked + label::before {
   width: 24px;
   background-position: left;
   background-repeat: no-repeat;
   border-width: 0;
-  background-image: url("../img/bullet-checkbox-check.svg");
+  background-image: url("../img/icon-checkbox-checked.svg");
+}
+
+.filter-filler input:disabled + label {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
 }
 
 .filter-filler input:disabled + label::before {
@@ -1359,6 +1366,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
   height: 36px;
   padding: 3px 29px;
   background: var(--white-op02);
@@ -1369,16 +1377,16 @@ button {
   line-height: 18px;
 }
 
-.filter__button:hover {
+.filter__button:hover,
+.filter__button:active {
+  border-width: 0;
   background-color: var(--white);
   color: var(--gray-32);
+  z-index: 14;
 }
 
 .filter__button:active {
-  padding: 3px 31px;
-  border-width: 0;
   box-shadow: inset 0px 2px 1px var(--gray-69);
-  z-index: 14;
 }
 
 
