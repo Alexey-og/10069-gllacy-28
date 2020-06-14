@@ -68,7 +68,7 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem("loginEmail");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -84,10 +84,10 @@ loginIcon.addEventListener("focus", function (evt) {
   }
 });
 
-loginForm.addEventListener("focusout", function (evt) {
+/* loginForm.addEventListener("blur", function (evt) {
   evt.preventDefault();
   loginForm.classList.remove("modal-show");
-});
+}); */
 
 loginForm.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -95,6 +95,21 @@ loginForm.addEventListener("keydown", function (evt) {
     popup.classList.remove("modal-show");
   }
 });
+
+loginForm.addEventListener("submit", function (evt) {
+  if (!loginEmail.value || !loginPassword.value) {
+    evt.preventDefault();
+    loginForm.classList.remove("modal-error");
+    loginForm.offsetWidth = loginForm.offsetWidth;
+    loginForm.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("loginEmail", loginEmail.value);
+    }
+  }
+});
+
+
 
 /*
 
