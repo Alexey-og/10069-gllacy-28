@@ -55,7 +55,7 @@
 }
 
 @keyframes slide-down {
-  0%    { transform: translateY(-50px); }
+  0%    { transform: translateY(-30px); }
   70%   { transform: translateY(-3px);  }
   100%  { transform: translateY(0);     }
 }
@@ -274,7 +274,7 @@ button {
 .main-menu__link:focus + .sub-menu,
 .main-menu__link:focus-within + .sub-menu {
   display: flex;
-  animation: slide-down 0.2s;
+  animation: slide-down 0.1s;
 }
 
 .main-menu__link:hover::before {
@@ -377,7 +377,7 @@ button {
 .search__icon:hover + .search__form,
 .search__icon:focus + .search__form {
   display: flex;
-  animation: bounce-modal 0.4s;
+  /* animation: bounce-modal 0.4s; */
 }
 
 .search__icon:hover::before {
@@ -456,8 +456,8 @@ button {
 
 .login__icon:hover + .login__form,
 .login__icon:focus + .login__form {
-  display: flex;
-  animation: bounce-modal 0.4s;
+  display: grid;
+  /* animation: bounce-modal 0.4s; */
 }
 
 .login__icon:hover::before {
@@ -564,7 +564,7 @@ button {
 .basket__icon--not-empty:hover + .basket__goods,
 .basket__icon--not-empty:focus + .basket__goods {
   display: flex;
-  animation: bounce-modal 0.4s;
+  /* animation: bounce-modal 0.4s; */
 }
 
  .basket__icon--not-empty:hover::before {
