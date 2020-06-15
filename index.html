@@ -30,14 +30,14 @@
         <div class="search">
           <a class="search__icon" href="" aria-label="Поиск по сайту"></a>
           <form class="search__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="search__input" type="text" name="text" placeholder="Крем-брюле" tabindex="0">
+            <input class="input search__input" type="text" name="text" placeholder="Крем-брюле" tabindex="0">
           </form>
         </div>
         <div class="login">
           <a class="login__icon" href="" tabindex="0">Вход</a>
           <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="login__input" type="email" name="email" placeholder="email@example.com" tabindex="0">
-            <input class="login__input" type="password" name="password" placeholder="......" tabindex="0">
+            <input class="input login__input" type="email" name="email" placeholder="email@example.com" tabindex="0">
+            <input class="input login__input" type="password" name="password" placeholder="......" tabindex="0">
             <button class="button login__button" type="submit" tabindex="0">Войти</button>
             <div class="login__registration">
               <a href="" tabindex="0">Забыли пароль?</a>
@@ -143,7 +143,7 @@
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <form class="mailing__form" action="">
           <p class="mailing__description">Подпишитесь на нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно&nbsp;=)</p>
-          <input class="mailing__email" type="email" name="email" placeholder="email@example.com">
+          <input class="input mailing__email" type="email" name="email" placeholder="email@example.com">
           <button class="button mailing__button" type="submit">Отправить</button>
         </form>
       </article>
@@ -188,21 +188,20 @@
       </div>
     </footer>
 
-    <section class="modal-feedback">
-      <button class="modal-close" type="button"></button>
+    <section class="modal feedback">
+      <button class="feedback__close" type="button"></button>
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p class="modal-feedback__title">Мы обязательно вам ответим!</p>
-      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru/" method="POST">
-        <input type="text" name="name" placeholder="Имя Фамилия">
-        <input type="email" name="email" placeholder="email@example.com">
-        <textarea name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        <button class="button modal-feedback__button" type="submit">Отправить</button>
+      <p class="feedback__title">Мы обязательно вам ответим!</p>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="POST">
+        <input class="input feedback__input" type="text" name="name" placeholder="Имя Фамилия">
+        <input class="input feedback__input" type="email" name="email" placeholder="email@example.com">
+        <textarea class="textarea feedback__textarea" name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <button class="button feedback__button" type="submit">Отправить</button>
       </form>
     </section>
 
     <div class="overlay"></div>
 
-    <script src="js/index.js"></script>
     <script src="js/script.js"></script>
 
   </body>
