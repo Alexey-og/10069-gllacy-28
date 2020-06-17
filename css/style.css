@@ -261,7 +261,7 @@ h1 {
 
 .gllacy-logo {
   display: block;
-  margin-right: 12px;
+  margin-right: 11px;
   width: 154px;
   height: 64px;
   background-image: url("../img/logo-gllacyshop.svg");
@@ -272,7 +272,7 @@ h1 {
   justify-content: flex-start;
   align-items: center;
   margin-right: auto;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .main-menu {
@@ -392,6 +392,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 4px;
 }
 
 .search {
@@ -474,7 +475,7 @@ h1 {
   align-items: center;
   height: 32px;
   padding: 6px 16px 6px 45px;
-  background-position: 16px 6px;
+  background-position: 17px 6px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-login.svg");
   background-color: var(--white-opacity-2);
@@ -694,7 +695,7 @@ h1 {
   justify-content: flex-start;
   align-items: flex-end;
   right: 0;
-  top: 65px;
+  top: 66px;
   z-index: 2;
 }
 
@@ -780,7 +781,7 @@ h1 {
 }
 
 .ice-slide__title {
-  margin: 0 0 27px 0;
+  margin: 0 0 26px 0;
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
@@ -801,7 +802,7 @@ h1 {
 .slide-switcher {
   position: absolute;
   left: 0px;
-  bottom: 20px;
+  bottom: 22px;
   display: flex;
 }
 
@@ -874,6 +875,7 @@ h1 {
 .special_offer__button {
   margin-top: auto;
   align-self: flex-end;
+  padding: 15px 22px;
 }
 
 
@@ -900,7 +902,7 @@ h1 {
 .product__title {
   order: 2;
   margin: 0;
-  padding-top: 9px;
+  padding-top: 7px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -917,7 +919,7 @@ h1 {
   align-self: flex-start;
   position: absolute;
   left: 0;
-  top: 215px;
+  top: 209px;
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
@@ -968,8 +970,8 @@ h1 {
   background-position: center;
   top: 0px;
   left: 0px;
-  width: 60px;
-  height: 60px;
+  width: 61px;
+  height: 61px;
   border-radius: 50%;
 }
 
@@ -1004,9 +1006,9 @@ h1 {
 
 .advantages__item {
   position: relative;
-  padding: 21px 0 12px 55px;
+  padding: 16px 0 5px 55px;
   color: var(--gray-32);
-  width: 48%;
+  width: 49%;
 }
 
 .advantages__item::before {
@@ -1014,7 +1016,7 @@ h1 {
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  top: 10px;
+  top: 9px;
   left: 0px;
   width: 49px;
   height: 49px;
