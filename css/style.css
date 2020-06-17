@@ -207,7 +207,6 @@ h1 {
   background-image: url("../img/ice-slide-3.jpg");
 }
 
-.page-header,
 .page-main {
   position: relative;
   display: grid;
@@ -254,19 +253,26 @@ h1 {
 
 /* Шапка */
 
-.main-nav {
-  grid-column: 1 / 4;
+.page-header {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-.main-nav__logo {
+.gllacy-logo {
   display: block;
-  margin-right: 24px;
+  margin-right: 12px;
   width: 154px;
   height: 64px;
   background-image: url("../img/logo-gllacyshop.svg");
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: auto;
+  padding-bottom: 3px;
 }
 
 .main-menu {
@@ -522,7 +528,8 @@ h1 {
   display: grid;
 }
 
-.login__input {
+.login__email,
+.login__password {
   grid-column: 1 / -1;
   width: 100%;
 }
@@ -1450,7 +1457,8 @@ h1 {
   margin: 22px 0 7px 0;
 }
 
-.feedback__input {
+.feedback__name,
+.feedback__email {
   width: 267px;
   margin-bottom: 20px;
   border-color: var(--input-feedback-border);

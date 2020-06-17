@@ -9,8 +9,8 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="gllacy-logo" href="index.html" aria-label="Логотип интернет-магазина Глейси"></a>
       <nav class="main-nav">
-        <a class="main-nav__logo" href="index.html"></a>
         <ul class="main-nav__menu main-menu">
           <li class="main-menu__item"><a class="main-menu__link main-menu__link--current" href="catalog.html">Каталог</a>
             <div class="main-menu__sub-menu sub-menu">
@@ -29,19 +29,19 @@
         <h2 class="visually-hidden">Личный кабинет пользователя</h2>
         <div class="search">
           <a class="search__icon" href="" aria-label="Поиск по сайту"></a>
-          <form class="search__form" action="">
-            <input class="search__input" type="text" placeholder="Крем-брюле" tabindex="0">
+          <form class="search__form" action="https://echo.htmlacademy.ru/" method="POST">
+            <input class="input search__input" type="text" name="text" placeholder="Крем-брюле" tabindex="0">
           </form>
         </div>
         <div class="login">
-          <a class="login__icon" href="">Вход</a>
-          <form class="login__form" action="">
-            <input class="login__input" type="email" placeholder="email@example.com">
-            <input class="login__input" type="password" placeholder="......">
-            <button class="button login__button" type="submit">Войти</button>
+          <a class="login__icon" href="" tabindex="0">Вход</a>
+          <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+            <input class="input login__email" type="email" name="email" placeholder="email@example.com" tabindex="0">
+            <input class="input login__password" type="password" name="password" placeholder="......" tabindex="0">
+            <button class="button login__button" type="submit" tabindex="0">Войти</button>
             <div class="login__registration">
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
+              <a href="" tabindex="0">Забыли пароль?</a>
+              <a href="" tabindex="0">Новая регистрация</a>
             </div>
           </form>
         </div>

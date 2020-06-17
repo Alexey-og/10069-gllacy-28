@@ -5,11 +5,28 @@ var slideSwitcher = document.querySelector(".slide-switcher");
 var iceSlide = document.querySelectorAll(".ice-slider__item");
 var slideSwitcherItem = document.querySelectorAll(".slide-switcher__item");
 
+var overlay = document.querySelector(".overlay");
+
 var feedbackButton = document.querySelector(".gllacy-contacts__button");
 var feedbackPopup = document.querySelector(".feedback");
 var feedbackClose = document.querySelector(".feedback__close");
-var overlay = document.querySelector(".overlay");
+var feedbackForm = document.querySelector(".feedback__form");
+var feedbackName = document.querySelector(".feedback__name");
+var feedbackEmail = document.querySelector(".feedback__email");
 
+var isStorageSupport = true;
+var storage = "";
+
+var openPopup = function () {
+  feedbackPopup.classList.add("modal-show");
+  overlay.classList.add("modal-show");
+};
+
+var closePopup = function () {
+  feedbackPopup.classList.remove("modal-show");
+  feedbackPopup.classList.remove("modal-error");
+  overlay.classList.remove("modal-show");
+};
 
 if (slideSwitcher) {
   slideSwitcher.addEventListener("click", function (evt) {
@@ -28,47 +45,53 @@ if (slideSwitcher) {
   });
 }
 
+try {
+  storage = localStorage.getItem("feedbackName");
+} catch (err) {
+  isStorageSupport = false;
+}
+
 if (feedbackPopup) {
   feedbackButton.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedbackPopup.classList.add("modal-show");
-    overlay.classList.add("modal-show");
+    openPopup();
+    if (storage) {
+      feedbackName.value = storage;
+      feedbackEmail.focus();
+    } else {
+      feedbackName.focus();
+    }
   });
 
   feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedbackPopup.classList.remove("modal-show");
-    overlay.classList.remove("modal-show");
+    closePopup();
   });
 
   overlay.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedbackPopup.classList.remove("modal-show");
-    overlay.classList.remove("modal-show");
+    closePopup();
   });
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
       if (feedbackPopup.classList.contains("modal-show")) {
-        feedbackPopup.classList.remove("modal-show");
-        overlay.classList.remove("modal-show");
+        closePopup();
+      }
+    }
+  });
+
+  feedbackForm.addEventListener("submit", function (evt) {
+    if (!feedbackName.value || !feedbackEmail.value) {
+      evt.preventDefault();
+      feedbackPopup.classList.remove("modal-error");
+      feedbackPopup.style.width = feedbackPopup.offsetWidth;    /*  необходимо для возможности повторно потрясти форму без перезагрузки страницы  */
+      feedbackPopup.classList.add("modal-error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("feedbackName", feedbackName.value);
       }
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
