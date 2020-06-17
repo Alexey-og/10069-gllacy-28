@@ -7,12 +7,17 @@ var slideSwitcherItem = document.querySelectorAll(".slide-switcher__item");
 
 var overlay = document.querySelector(".overlay");
 
+var ESC_KEY = 27;
+var TAB_KEY = 9;
 var feedbackButton = document.querySelector(".gllacy-contacts__button");
 var feedbackPopup = document.querySelector(".feedback");
 var feedbackClose = document.querySelector(".feedback__close");
 var feedbackForm = document.querySelector(".feedback__form");
 var feedbackName = document.querySelector(".feedback__name");
 var feedbackEmail = document.querySelector(".feedback__email");
+
+var firstFocusableElement = document.querySelector(".feedback__close");
+var lastFocusableElement = document.querySelector(".feedback__button");
 
 var isStorageSupport = true;
 var storage = "";
@@ -74,10 +79,24 @@ if (feedbackPopup) {
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
+    if (evt.keyCode === ESC_KEY) {
       evt.preventDefault();
       if (feedbackPopup.classList.contains("modal-show")) {
         closePopup();
+      }
+    }
+
+    if (evt.keyCode === TAB_KEY) {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus();
+        evt.preventDefault();
+      }
+    }
+
+    if (evt.keyCode === TAB_KEY && evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus();
+        evt.preventDefault();
       }
     }
   });
