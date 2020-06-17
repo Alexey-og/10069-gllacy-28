@@ -317,9 +317,9 @@ h1 {
 }
 
 .main-menu__link:hover + .sub-menu,
-.main-menu__link:focus + .sub-menu,
-.main-menu__link:focus-within + .sub-menu {
+.main-menu__link:focus + .sub-menu {
   display: flex;
+  animation: slide-down 0.2s;
 }
 
 .main-menu__link:hover::before {
@@ -413,18 +413,19 @@ h1 {
   background-image: url("../img/icon-search.svg");
 }
 
-.search__icon:hover,
-.search__icon:focus {
+.search:hover .search__icon,
+.search:focus .search__icon {
   background-color: var(--white);
   background-image: url("../img/icon-search-black.svg");
 }
 
-.search__icon:hover + .search__form,
-.search__icon:focus + .search__form {
+.search:hover .search__form,
+.search:focus .search__form {
   display: flex;
+  animation: bounce-modal 0.2s;
 }
 
-.search__icon:hover::before {
+.search:hover .search__icon::before {
   position: absolute;
   content: "";
   width: 130px;
@@ -484,19 +485,20 @@ h1 {
   text-decoration: none;
 }
 
-.login__icon:hover,
-.login__icon:focus {
+.login:hover .login__icon,
+.login:focus .login__icon {
   background-color: var(--white);
   background-image: url("../img/icon-login-black.svg");
   color: var(--gray-32);
 }
 
-.login__icon:hover + .login__form,
-.login__icon:focus + .login__form {
+.login:hover .login__form,
+.login:focus .login__form {
   display: grid;
+  animation: bounce-modal 0.2s;
 }
 
-.login__icon:hover::before {
+.login:hover .login__icon::before {
   position: absolute;
   content: "";
   width: 100px;
