@@ -592,9 +592,10 @@ h1 {
   background-image: url("../img/icon-basket-red.svg");
 }
 
-.basket__icon--not-empty:hover + .basket__goods,
-.basket__icon--not-empty:focus + .basket__goods {
+.basket:hover .basket__goods,
+.basket:focus .basket__goods {
   display: flex;
+  animation: bounce-modal 0.2s;
 }
 
  .basket__icon--not-empty:hover::before {
