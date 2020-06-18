@@ -1554,6 +1554,7 @@ h1 {
   background-image: url("../img/map-bg.png");
   background-position: left center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .gllacy-map__interactive {

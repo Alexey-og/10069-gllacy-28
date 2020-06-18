@@ -28,17 +28,17 @@
       <section class="user-cabinet">
         <h2 class="visually-hidden">Личный кабинет пользователя</h2>
         <div class="search">
-          <a class="search__icon" href="" aria-label="Поиск по сайту"></a>
+          <a class="search__icon" href="" aria-label="Иконка поиска по сайту"></a>
           <form class="search__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="input search__input" type="text" name="text" placeholder="Крем-брюле" tabindex="0">
+            <input class="input search__input" type="text" name="text" placeholder="Крем-брюле" aria-label="Поле поиска по сайту" tabindex="0">
           </form>
         </div>
         <div class="login">
-          <a class="login__icon" href="" tabindex="0">Вход</a>
+          <a class="login__icon" href="" aria-label="Иконка входа в личный кабинет" tabindex="0">Вход</a>
           <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="input login__email" type="email" name="email" placeholder="email@example.com" tabindex="0">
-            <input class="input login__password" type="password" name="password" placeholder="......" tabindex="0">
-            <button class="button login__button" type="submit" tabindex="0">Войти</button>
+            <input class="input login__email" type="email" name="email" placeholder="email@example.com" aria-label="Поле ввода электронной почты для входа в личный кабинет" tabindex="0">
+            <input class="input login__password" type="password" name="password" placeholder="......" aria-label="Поле ввода пароля для входа в личный кабинет" tabindex="0">
+            <button class="button login__button" type="submit" aria-label="Кнопка входа в личный кабинет" tabindex="0">Войти</button>
             <div class="login__registration">
               <a href="" tabindex="0">Забыли пароль?</a>
               <a href="" tabindex="0">Новая регистрация</a>
@@ -46,19 +46,19 @@
           </form>
         </div>
         <div class="basket">
-          <a class="basket__icon basket__icon--not-empty" href="">2 товара</a>
+          <a class="basket__icon basket__icon--not-empty" href="" aria-label="Иконка корзины с покупками">2 товара</a>
           <div class="basket__goods">
             <article class="basket-list">
               <h2 class="visually-hidden">Список покупок</h2>
               <div class="basket-item">
-                <a class="basket-item__delete" aria-label="Удалить позицию"></a>
+                <a class="basket-item__delete" aria-label="Кнопка удаления товара из корзины"></a>
                 <img class="basket-item__image" src="img/ice-creamy-w-orange-jam.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                 <a class="basket-item__title" href="">Пломбир с апельсиновым джемом</a>
                 <p class="basket-item__amount">1,5 кг х <span class="basket-item__cost">200 руб.</span></p>
                 <p class="basket-item__price">300 руб.</p>
               </div>
               <div class="basket-item">
-                <a class="basket-item__delete" aria-label="Удалить позицию"></a>
+                <a class="basket-item__delete" aria-label="Кнопка удаления товара из корзины"></a>
                 <img class="basket-item__image" src="img/ice-creamy-strawberry-w-white-chocolate.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                 <a class="basket-item__title" href="">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</a>
                 <p class="basket-item__amount">1,5 кг х <span class="basket-item__cost">300 руб.</span></p>
@@ -127,103 +127,103 @@
             <input type="checkbox" name="jams" value="jams" id="jams"><label for="jams" tabindex="0">джемы</label>
           </div>
         </fieldset>
-        <button class="filter__button" type="submit">Применить</button>
+        <button class="filter__button" type="submit" aria-label="Кнопка отправки формы с фильтром подбора мороженого">Применить</button>
       </form>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого Глэйси</h2>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-orange-jam.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-orange-jam.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой"></a>
           <div class="product__price">310 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-          <a href=""><img class="product__image" src="img/ice-cream-coffee-w-chocolate.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
+          <a href=""><img class="product__image" src="img/ice-cream-coffee-w-chocolate.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада"></a>
           <div class="product__price">380 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочно-кофейное мороженое с кусочками шоколада">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-strawberry-w-white-chocolate.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-strawberry-w-white-chocolate.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада"></a>
           <div class="product__price">355 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочно-клубничное мороженое с присыпкой из белого шоколада">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
           <a href=""><img class="product__image" src="img/ice-creme-brulee-w-caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
           <div class="product__price">415 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное крем-брюле с карамельной подливкой">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное с брусничным джемом</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-lingonberry.jpg" width="267" height="267" alt="Сливочное с брусничным джемом"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-lingonberry.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом"></a>
           <div class="product__price">325 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное мороженое с брусничным джемом">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочно-черничное с цельными ягодами черники</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-blueberry-w-blueberries.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-blueberry-w-blueberries.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники"></a>
           <div class="product__price">410 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочно-черничное мороженое с цельными ягодами черники">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочно-лимонное с карамельной присыпкой</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-lemon-w-caramel.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-lemon-w-caramel.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое с карамельной присыпкой"></a>
           <div class="product__price">315 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочно-лимонное мороженое с карамельной присыпкой">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное с шоколадной стружкой</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-chocolate.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-chocolate.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой"></a>
           <div class="product__price">320 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное мороженое с шоколадной стружкой">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочно-ванильное с кусочками шоколада</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-vanilla-w-chocolate.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-vanilla-w-chocolate.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада"></a>
           <div class="product__price">440 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочно-ванильное мороженое с кусочками шоколада">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочноe с ментоловым сиропом</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-menthol.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-menthol.jpg" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом"></a>
           <div class="product__price">435 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочноe мороженое с ментоловым сиропом">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное с кусочками черного шоколада</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-dark-chocolate.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-dark-chocolate.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада"></a>
           <div class="product__price">355 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное мороженое с кусочками черного шоколада">Быстрый просмотр</a>
         </article>
         <article class="catalog__item product">
           <h3 class="product__title"><a href="">Сливочное с мятным сиропом</a></h3>
-          <a href=""><img class="product__image" src="img/ice-creamy-w-mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом"></a>
+          <a href=""><img class="product__image" src="img/ice-creamy-w-mint.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом"></a>
           <div class="product__price">420 ₽<span>/кг</span></div>
-          <a class="button product__button" href="">Быстрый просмотр</a>
+          <a class="button product__button" href="" aria-label="Информация про сливочное мороженое с мятным сиропом">Быстрый просмотр</a>
         </article>
       </section>
 
       <div class="paginator">
-        <a class="paginator__prev"></a>
+        <a class="paginator__prev" aria-label="Перейти на предыдущую страницу каталога"></a>
         <a class="paginator__page paginator__page--active">1</a>
-        <a class="paginator__page" href="">2</a>
-        <a class="paginator__page" href="">3</a>
-        <a class="paginator__page" href="">4</a>
-        <a class="paginator__page" href="">5</a>
-        <a class="paginator__next" href=""></a>
+        <a class="paginator__page" href="" aria-label="Перейти на вторую страницу каталога">2</a>
+        <a class="paginator__page" href="" aria-label="Перейти на третью страницу каталога">3</a>
+        <a class="paginator__page" href="" aria-label="Перейти на четвертую страницу каталога">4</a>
+        <a class="paginator__page" href="" aria-label="Перейти на пятую страницу каталога">5</a>
+        <a class="paginator__next" href="" aria-label="Перейти на следующую страницу каталога"></a>
       </div>
 
     </main>
 
     <footer class="page-footer">
       <div class="social">
-        <a class="social__icon social__icon--tw" href="" aria-label="Глэйси в Твиттере"></a>
-        <a class="social__icon social__icon--insta" href="" aria-label="Глэйси в Инстаграме"></a>
-        <a class="social__icon social__icon--fb" href="" aria-label="Глэйси на Фейсбуке"></a>
-        <a class="social__icon social__icon--vk" href="" aria-label="Глэйси во ВКонтакте"></a>
+        <a class="social__icon social__icon--tw" href="" aria-label="Ссылка на аккаунт Глэйси в Твиттере"></a>
+        <a class="social__icon social__icon--insta" href="" aria-label="Ссылка на аккаунт Глэйси в Инстаграме"></a>
+        <a class="social__icon social__icon--fb" href="" aria-label="Ссылка на аккаунт Глэйси на Фейсбуке"></a>
+        <a class="social__icon social__icon--vk" href="" aria-label="Ссылка на аккаунт Глэйси во ВКонтакте"></a>
       </div>
       <div class="bottom-menu">
         <a class="bottom-menu__item bottom-menu__item--like" href="">Для поставщиков</a>
@@ -232,12 +232,10 @@
         <a class="bottom-menu__item" href="">Экологические стандарты</a>
       </div>
       <div class="html-academy">
-        <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+        <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy"></a>
         <p class="html-academy__copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
       </div>
     </footer>
-
-    <div class="overlay"></div>
 
     <svg style="display: none;">
       <symbol id="icon-range-button" viewBox="0 0 22 25">
