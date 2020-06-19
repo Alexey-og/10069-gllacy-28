@@ -52,6 +52,7 @@
   --button-hover-shadow: #AC1000;
   --button-active-bg: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --button-active-shadow: #942718;
+  --basket-button-shadow: rgba(172, 16, 0, 0.25);
 
   --ice-slide-button-shadow: rgba(172, 16, 0, 0.64);
   --special-offer-title-shadow: rgba(0, 0, 0, 0.25);
@@ -149,7 +150,7 @@ a:active {
 
 h1 {
   grid-column: 1 / -1;
-  margin: 8px 0 20px;
+  margin: 0 0 12px;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
@@ -172,6 +173,8 @@ h1 {
 .input::placeholder,
 .textarea::placeholder {
   font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
   color: var(--gray-99);
 }
 
@@ -272,7 +275,7 @@ h1 {
   justify-content: flex-start;
   align-items: center;
   margin-right: auto;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 }
 
 .main-menu {
@@ -284,7 +287,7 @@ h1 {
 
 .main-menu__item {
   position: relative;
-  margin-right: 6px;
+  margin-right: 3px;
 }
 
 .main-menu__link {
@@ -292,7 +295,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6px 13px 7px;
+  padding: 6px 15px 7px 14px;
   border-radius: 26px;
   font-weight: bold;
   font-size: 16px;
@@ -474,7 +477,7 @@ h1 {
   justify-content: flex-end;
   align-items: center;
   height: 32px;
-  padding: 6px 16px 6px 45px;
+  padding: 7px 16px 5px 45px;
   background-position: 17px 6px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-login.svg");
@@ -495,7 +498,7 @@ h1 {
 
 .login:hover .login__form,
 .login:focus .login__form {
-  display: grid;
+  display: flex;
   animation: bounce-modal 0.2s;
 }
 
@@ -512,13 +515,12 @@ h1 {
 .login__form {
   position: absolute;
   display: none;
-  row-gap: 20px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 44px 44px 44px;
+  flex-wrap: wrap;
+  align-items: flex-start;
   top: 36px;
   right: 0;
   width: 277px;
-  height: 214px;
+  min-height: 214px;
   padding: 20px 17px 22px 19px;
   background-color: var(--form-bg);
   box-shadow: 0px 20px 20px var(--form-shadow);
@@ -528,26 +530,28 @@ h1 {
 
 .login__form:hover,
 .login__form:focus {
-  display: grid;
+  display: flex;
 }
 
 .login__email,
 .login__password {
-  grid-column: 1 / -1;
-  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 .login__button {
-  margin-right: 20px;
+  padding: 10px 27px 10px 25px;
+  box-shadow: 0px 1px 2px var(--basket-button-shadow);
+  text-shadow: none;
 }
 
 .login__registration {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 0px;
+  width: 120px;
+  margin-left: auto;
   font-size: 13px;
-  line-height: 15px;
   color: var(--gray-32);
 }
 
@@ -566,7 +570,7 @@ h1 {
   justify-content: flex-end;
   align-items: center;
   height: 32px;
-  padding: 6px 16px 6px 45px;
+  padding: 7px 16px 5px 44px;
   background-position: 16px 6px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-basket.svg");
@@ -639,7 +643,7 @@ h1 {
 .basket-item {
   display: grid;
   row-gap: 20px;
-  grid-template-columns: 26px 46px auto 120px 70px;
+  grid-template-columns: 26px 46px auto 121px 69px;
   grid-template-rows: 53px;
   line-height: 16px;
 }
@@ -648,13 +652,13 @@ h1 {
 .basket-item__title,
 .basket-item__amount,
 .basket-item__price {
-  margin: 10px 0;
+  margin: 9px 0 11px;
 }
 
 .basket-item__delete {
   width: 11px;
   height: 11px;
-  margin-left: 6px;
+  margin: 11px 6px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--white-opacity-2);
@@ -680,7 +684,7 @@ h1 {
 }
 
 .basket__total-price {
-  padding: 18px 0;
+  padding: 15px 0;
   margin: 0;
   font-size: 15px;
   font-weight: bold;
@@ -688,13 +692,15 @@ h1 {
   color: var(--gray-32);
 }
 
+.basket__button {
+  padding: 11px 15px;
+  box-shadow: 0px 1px 2px var(--basket-button-shadow);
+  text-shadow: none;
+}
 
 .timetable {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  text-align: right;
   right: 0;
   top: 66px;
   z-index: 2;
@@ -726,7 +732,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 28px 250px 5px 0;
+  margin: 26px 250px 2px 0;
   padding: 0;
   list-style-type: none;
   font-size: 14px;
@@ -737,7 +743,7 @@ h1 {
 .breadcrumbs a {
   display: flex;
   position: relative;
-  margin-right: 22px;
+  margin-right: 23px;
 }
 
 .breadcrumbs a:not(:last-child)::after {
@@ -745,7 +751,7 @@ h1 {
   content: "";
   width: 6px;
   height: 6px;
-  right: -12px;
+  right: -15px;
   top: 5px;
   background-image: url("../img/icon-breadcrumbs.svg");
   background-position: center;
@@ -888,7 +894,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 267px);
   column-gap: 26px;
-  row-gap: 40px;
+  row-gap: 37px;
   margin-bottom: 40px;
 }
 
@@ -902,6 +908,7 @@ h1 {
 
 .product__title {
   order: 2;
+  width: 257px;
   margin: 0;
   padding-top: 7px;
   text-align: center;
@@ -982,7 +989,7 @@ h1 {
 .about-gllacy {
   grid-column: 1 / -1;
   margin-bottom: 40px;
-  padding: 24px 20px;
+  padding: 24px 20px 26px;
   background-color: var(--waffle-bg);
   background-image: url("../img/bg-waffle-pattern.jpg");
   border-radius: 16px;
@@ -1056,7 +1063,7 @@ h1 {
 
 .blog-news {
   grid-column: 1 / 3;
-  padding: 23px 20px;
+  padding: 18px 20px;
   background-image: url("../img/bg-strawberry.jpg");
 }
 
@@ -1068,7 +1075,7 @@ h1 {
 }
 
 .blog-news__title {
-  margin: 0 0 15px 0;
+  margin: 0 0 3px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.37;
@@ -1095,7 +1102,7 @@ h1 {
   align-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 28px 20px 35px;
+  padding: 24px 20px 35px;
   background-color: var(--form-bg);
   border-radius: 16px;
 }
@@ -1108,11 +1115,12 @@ h1 {
 
 .mailing__email {
   flex-grow: 1;
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .mailing__button {
   flex-grow: 0;
+  padding: 12px 19px;
 }
 
 
@@ -1149,7 +1157,7 @@ h1 {
   line-height: 16px;
 }
 
-.filter__sausage,
+.filter__wrapper,
 .filter-sorting select {
   display: flex;
   align-items: center;
@@ -1187,7 +1195,7 @@ h1 {
   font-weight: normal;
 }
 
-.filter-range .filter__sausage {
+.filter-range .filter__wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -1233,7 +1241,7 @@ h1 {
   margin-right: 0;
 }
 
-.filter-fat .filter__sausage {
+.filter-fat .filter__wrapper {
   margin-right: 0;
   padding: 3px 17px 3px 14px;
 }
@@ -1315,7 +1323,7 @@ h1 {
 }
 
 
-.filter-filler .filter__sausage  {
+.filter-filler .filter__wrapper  {
   padding: 3px 21px 3px 16px;
 }
 
@@ -1378,9 +1386,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   height: 36px;
-  padding: 3px 29px;
+  padding: 3px 27px;
   background: var(--white-opacity-2);
   border: 2px solid var(--white);
   border-radius: 20px;
@@ -1430,7 +1437,7 @@ h1 {
   min-height: 441px;
   background-color: var(--form-bg);
   border-radius: 6px;
-  padding: 20px 23px;
+  padding: 15px 24px;
   z-index: 15;
   animation: bounce 0.6s;
 }
@@ -1459,7 +1466,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 22px 0 7px 0;
+  margin: 19px 0 7px 0;
 }
 
 .feedback__name,
@@ -1471,7 +1478,7 @@ h1 {
 
 
 .feedback__textarea {
-  padding: 16px 14px;
+  padding: 11px 14px;
   margin-bottom: 25px;
   height: 154px;
   resize: none;
@@ -1500,7 +1507,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 40px -10px 29px 0;
+  margin: 36px -10px 29px 0;
 }
 
 .paginator * {
@@ -1522,8 +1529,13 @@ h1 {
   line-height: 18px;
 }
 
-.paginator__page:hover,
-.paginator__page--active {
+.paginator__page:hover {
+  background-color: var(--white-opacity-2);
+  color: var(--white);
+}
+
+.paginator__page:active,
+.paginator__page--current {
   background-color: var(--white);
   color: var(--gray-32);
 }
@@ -1560,7 +1572,6 @@ h1 {
 .gllacy-map__interactive {
   position: relative;
   margin-left: calc((100vw - 1200px) / -2);
-  /* background-color: var(--gray-ed); */
   height: 430px;
   width: calc(100vw - 9px);
   overflow: hidden;
@@ -1593,7 +1604,7 @@ h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 303px;
   min-height: 306px;
   background-color: var(--gray-fe);
@@ -1606,7 +1617,7 @@ h1 {
 
 .gllacy-contacts__address,
 .gllacy-contacts__phone {
-  margin: 0 0 24px 0;
+  margin: 0 0 22px 0;
 }
 
 .gllacy-contacts__address *,
@@ -1622,9 +1633,14 @@ h1 {
   line-height: 24px;
 }
 
+.gllacy-contacts__phone a {
+  margin-top: 2px;
+}
+
 .gllacy-contacts__button,
 .gllacy-contacts__button:hover,
 .gllacy-contacts__button:active {
+  margin-top: auto;
   color: var(--white);
 }
 
@@ -1697,23 +1713,26 @@ h1 {
   flex-shrink: 1;
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 15px;
+  column-gap: 10px;
+  row-gap: 6px;
   margin: 0 50px;
+  padding-top: 9px;
 }
 
 .bottom-menu__item {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 10px 5px 22px;
+  margin: 0 0 0 23px;
   font-size: 13px;
-  line-height: 1.38;
+  line-height: 18px;
 }
 
 .bottom-menu__item::before {
   position: absolute;
   content: "";
-  left: -22px;
+  left: -21px;
+  top: 3px;
   width: 15px;
   height: 13px;
 }

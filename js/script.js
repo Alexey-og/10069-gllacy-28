@@ -105,7 +105,7 @@ if (feedbackPopup) {
     if (!feedbackName.value || !feedbackEmail.value) {
       evt.preventDefault();
       feedbackPopup.classList.remove("modal-error");
-      feedbackPopup.style.width = feedbackPopup.offsetWidth;    /*  необходимо для возможности повторно потрясти форму без перезагрузки страницы  */
+      feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
       feedbackPopup.classList.add("modal-error");
     } else {
       if (isStorageSupport) {
