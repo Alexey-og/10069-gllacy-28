@@ -176,7 +176,7 @@ h1 {
 .input::placeholder,
 .textarea::placeholder {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: var(--gray-99);
 }
@@ -930,7 +930,7 @@ h1 {
   order: 2;
   width: 257px;
   margin: 0;
-  padding-top: 7px;
+  padding-top: 13px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -1038,7 +1038,7 @@ h1 {
   position: relative;
   padding: 16px 0 5px 55px;
   color: var(--gray-32);
-  width: 49%;
+  width: 540px;
 }
 
 .advantages__item::before {
@@ -1046,7 +1046,7 @@ h1 {
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  top: 9px;
+  top: 7px;
   left: 0px;
   width: 49px;
   height: 49px;
@@ -1154,7 +1154,7 @@ h1 {
 
 .filter {
   grid-column: 1 / -1;
-  width: 869px;
+  width: 884px;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -1195,6 +1195,11 @@ h1 {
   min-height: 36px;
   font-size: 16px;
   line-height: 18px;
+}
+
+.filter__wrapper {
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .filter-sorting select {
@@ -1265,12 +1270,7 @@ h1 {
   left: 132px;
 }
 
-.filter-fat {
-  margin-right: 0;
-}
-
 .filter-fat .filter__wrapper {
-  margin-right: 0;
   padding: 3px 17px 3px 14px;
 }
 
@@ -1282,8 +1282,7 @@ h1 {
   clip: rect(0, 0, 0, 0);
 }
 
-.filter-fat input:focus + label,
-.filter-fat input:active + label {
+.filter-fat input:focus + label {
   outline-style: auto;
   outline-width: 1px;
 }
@@ -1291,7 +1290,7 @@ h1 {
 .filter-fat label {
   position: relative;
   padding-left: 33px;
-  margin-right: 19px;
+  margin: 3px 19px 3px 0;
 }
 
 .filter-fat label:last-child {
@@ -1379,7 +1378,7 @@ h1 {
   align-items: center;
   position: relative;
   padding-left: 32px;
-  margin-right: 20px;
+  margin: 3px 20px 3px 0;
 }
 
 .filter-filler label:last-child {
@@ -1427,6 +1426,7 @@ h1 {
   align-items: center;
   min-height: 36px;
   padding: 3px 27px;
+  margin: 14px 15px 0 0;
   background: var(--white-opacity-2);
   border: 2px solid var(--white);
   border-radius: 20px;
@@ -1697,12 +1697,15 @@ h1 {
 }
 
 .social {
-  flex-shrink: 0;
   display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  min-width: 170px;
+  max-width: 260px;
 }
 
 .social__icon {
-  margin-right: 8px;
+  margin: 4px 8px 4px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1749,11 +1752,12 @@ h1 {
 /* Нижнее меню */
 
 .bottom-menu {
-  flex-shrink: 1;
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 10px;
   row-gap: 6px;
+  max-width: 555px;
   margin: 0 50px;
   padding-top: 9px;
 }
@@ -1761,7 +1765,7 @@ h1 {
 .bottom-menu__item {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   margin: 0 0 0 23px;
   font-size: 13px;
   line-height: 18px;

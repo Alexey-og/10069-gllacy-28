@@ -30,14 +30,14 @@
         <div class="search">
           <a class="search__icon" href="#" aria-label="Иконка поиска по сайту"></a>
           <form class="search__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="input search__input" type="text" name="text" placeholder="Крем-брюле" aria-label="Поле поиска по сайту" tabindex="0">
+            <input class="input search__input" type="text" name="text" id="text" placeholder="Крем-брюле" tabindex="0"><label class="visually-hidden" for="text">Поиск по сайту</label>
           </form>
         </div>
         <div class="login">
           <a class="login__icon" href="#" aria-label="Иконка входа в личный кабинет" tabindex="0">Вход</a>
           <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
-            <input class="input login__email" type="email" name="email" placeholder="email@example.com" required aria-label="Поле ввода электронной почты для входа в личный кабинет" tabindex="0">
-            <input class="input login__password" type="password" name="password" placeholder="......" required aria-label="Поле ввода пароля для входа в личный кабинет" tabindex="0">
+            <input class="input login__email" type="email" name="email" id="email" placeholder="email@example.com" tabindex="0"><label class="visually-hidden" for="email">Поле ввода электронной почты для входа в личный кабинет</label>
+            <input class="input login__password" type="password" name="password" id="password" placeholder="......" tabindex="0"><label class="visually-hidden" for="password">Поле ввода пароля для входа в личный кабинет</label>
             <button class="button login__button" type="submit" aria-label="Кнопка входа в личный кабинет" tabindex="0">Войти</button>
             <div class="login__registration">
               <a href="#" aria-label="Восстановление забытого пароля" tabindex="0">Забыли пароль?</a>
@@ -140,7 +140,7 @@
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <form class="mailing__form" action="https://echo.htmlacademy.ru/" method="POST">
           <p class="mailing__description">Подпишитесь на нашу сладкую рассылку и&nbsp;будьте всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно&nbsp;=)</p>
-          <input class="input mailing__email" type="email" name="email" placeholder="email@example.com" required aria-label="Поле ввода электронной почты для подписки на рассылку">
+          <input class="input mailing__email" type="email" name="email" id="email" placeholder="email@example.com" required><label class="visually-hidden" for="email">Поле ввода электронной почты для подписки на рассылку</label>
           <button class="button mailing__button" type="submit" aria-label="Кнопка отправки формы подписки на рассылку">Отправить</button>
         </form>
       </article>
